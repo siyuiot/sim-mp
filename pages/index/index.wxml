@@ -18,6 +18,6 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">登录</button>
   </view>
 </view>
