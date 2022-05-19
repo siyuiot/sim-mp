@@ -1,4 +1,5 @@
 // index.js
+const login = require('../../utils/login')
 // 获取应用实例
 const app = getApp()
 
@@ -46,6 +47,13 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  getPhoneNumber (e) {
+    // console.log(e.detail.code)
+    let that = this
+    login.login(e,that,function(){
+      // that.getUserStatus()
     })
   }
 })

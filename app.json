@@ -18,10 +18,10 @@
 		"backgroundColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/home/home"
+        "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/index/index"
+        "pagePath": "pages/home/home"
       }
     ]
   },

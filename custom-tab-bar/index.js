@@ -5,12 +5,12 @@ Component({
 			{
 				icon: 'wap-home',
 				text: '首页',
-				url: '/pages/home/home'
+				url: '/pages/index/index'
 			},
 			{
 				icon: 'manager',
 				text: '我的',
-				url: '/pages/index/index'
+				url: '/pages/home/home'
 			}
 		]
 	},
