@@ -33,15 +33,16 @@ const login = function(e,that,callback){
 			},
 			success(res) {
         wx.hideLoading()
-        console.log(res)
+        // console.log(res)
 				if (res.state == 0) {
+          console.log("login success")
 					wx.setStorageSync('token', res.data.token)
-					wx.setStorageSync('pn', res.data.pn)
-					wx.setStorageSync("user_id", res.data.user_id)
-					that.setData({
-						isLogined: true,
-						phoneNumber: res.data.pn
-					})
+					wx.setStorageSync('pn', res.data.user.phoneNum)
+					wx.setStorageSync("user_id", res.data.user.uid)
+					// that.setData({
+					// 	isLogined: true,
+					// 	phoneNumber: res.data.pn
+					// })
 					callback()
 				} else {
 					wx.showToast({

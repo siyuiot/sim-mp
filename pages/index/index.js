@@ -47,7 +47,7 @@ Page({
     })
   },
   getPhoneNumber (e) {
-    console.log(e.detail.code)
+    // console.log(e.detail.code)
     let that = this
     login.login(e,that,function(){
       // that.getUserStatus()
