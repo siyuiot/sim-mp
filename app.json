@@ -20,7 +20,7 @@
       {
         "pagePath": "pages/index/index"
       },
-      {
+      { 
         "pagePath": "pages/home/home"
       }
     ]

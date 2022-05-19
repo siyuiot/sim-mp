@@ -5,7 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        myPhoto: "/assets/images/icon.png",
+        phoneNumber: "", //手机号
+        isLogined:false,
     },
 
     /**
@@ -26,6 +28,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
+        // 处理自定义tabbar 图标需要点击两次的问题
 		this.getTabBar().init();
 	},
 

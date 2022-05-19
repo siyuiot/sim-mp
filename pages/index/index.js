@@ -19,6 +19,7 @@ Page({
     })
   },
   onShow() {
+    // 处理自定义tabbar 图标需要点击两次的问题
 		this.getTabBar().init();
 	},
   onLoad() {

@@ -1,2 +1,12 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="wrapper">
+  <button class="my-top" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
+    <view class="my-portrait">
+      <image src="/assets/images/{{isLogined?'logined_portrait.png':'portrait.png'}}"></image>
+    </view>
+    <view class="phone">{{isLogined?phoneNumber:"未登录"}}</view>
+    <view class="login" wx:if="{{isLogined}}">
+      <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">切换账号登录</button>
+    </view>
+  </button>
+</view>

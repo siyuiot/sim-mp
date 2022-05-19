@@ -1,1 +1,65 @@
 /* pages/home/home.wxss */
+
+page {
+    height: 100%;
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    padding-bottom: 1rpx;
+    box-sizing: border-box;
+    /* background-color: #e8e8e8; */
+    background: #f4f4f4;
+  }
+  
+  .my-top {
+    box-sizing: content-box;
+    display: flex;
+    display: -webkit-flex;
+    padding: 40rpx 20rpx 40rpx 40rpx;
+    line-height: 150rpx;
+    height: 150rpx;
+    /* background-color: #1c3aa0; */
+    /* color: #fff; */
+  }
+  
+  .phone {
+    flex: 1;
+    text-align: left;
+    padding-left: 30rpx;
+    font-size: 36rpx;
+  }
+  
+  .login button {
+    font-size: 24rpx;
+    background: none;
+    border: none;
+    color: #fff;
+    margin-top: 40rpx;
+    line-height: 70rpx;
+  }
+  
+  button::after {
+    border: none;
+  }
+  
+  .my-portrait-box {
+    text-align: center;
+  }
+  
+  .my-portrait image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+  }
+  
+  .btn {
+    margin-top: 80rpx;
+    color: #fff;
+    width: 60%;
+    border-radius: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: linear-gradient(to right, #00caff, #005df3);
+  }
+  
