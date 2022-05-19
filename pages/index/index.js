@@ -17,6 +17,9 @@ Page({
       url: '../logs/logs'
     })
   },
+  onShow() {
+		this.getTabBar().init();
+	},
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
