@@ -1,3 +1,4 @@
+const login = require('../../utils/login')
 // pages/home/home.js
 Page({
 
@@ -65,5 +66,12 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    getPhoneNumber (e) {
+      // console.log(e.detail.code)
+      let that = this
+      login.login(e,that,function(){
+        // that.getUserStatus()
+      })
     }
 })

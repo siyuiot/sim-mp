@@ -9,4 +9,9 @@
       <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">切换账号登录</button>
     </view>
   </button>
+  <button>sim卡绑定</button>
+  <button>用户sim卡列表</button>
+  <button>用户sim卡信息</button>
+  <button>商品列表</button>
+  <button>帮助</button>
 </view>

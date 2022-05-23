@@ -39,10 +39,10 @@ const login = function(e,that,callback){
 					wx.setStorageSync('token', res.data.token)
 					wx.setStorageSync('pn', res.data.user.phoneNum)
 					wx.setStorageSync("user_id", res.data.user.uid)
-					// that.setData({
-					// 	isLogined: true,
-					// 	phoneNumber: res.data.pn
-					// })
+					that.setData({
+						isLogined: true,
+						phoneNumber: res.data.user.phoneNum
+					})
 					callback()
 				} else {
 					wx.showToast({
