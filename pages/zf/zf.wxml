@@ -1,0 +1,8 @@
+<!--pages/zf/zf.wxml-->
+<view>pages/zf/zf.wxml
+    <button>sim卡绑定</button>
+    <button>用户sim卡列表</button>
+    <button>用户sim卡信息</button>
+    <button>商品列表</button>
+    <button>帮助</button>
+</view>

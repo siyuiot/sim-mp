@@ -19,6 +19,7 @@ page {
     padding: 40rpx 20rpx 40rpx 40rpx;
     line-height: 150rpx;
     height: 150rpx;
+    background: #f4f4f4;
     /* background-color: #1c3aa0; */
     /* color: #fff; */
   }

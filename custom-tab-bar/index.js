@@ -11,6 +11,11 @@ Component({
 				icon: 'manager',
 				text: '我的',
 				url: '/pages/home/home'
+			},
+			{
+				icon: 'location',
+				text: '志峰',
+				url: '/pages/zf/zf'
 			}
 		]
 	},

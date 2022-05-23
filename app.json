@@ -2,12 +2,12 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/my/my",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/zf/zf"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f4f4f4",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"black"
   },
@@ -22,6 +22,9 @@
       },
       { 
         "pagePath": "pages/home/home"
+      },
+      { 
+        "pagePath": "pages/zf/zf"
       }
     ]
   },
