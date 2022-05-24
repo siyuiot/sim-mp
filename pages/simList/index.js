@@ -1,18 +1,20 @@
-// pages/zf/zf.js
+
+let wxhttp = require("../../utils/wxhttp.js") //封装request请求
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+      list: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      
     },
 
     /**
@@ -26,8 +28,37 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // 处理自定义tabbar 图标需要点击两次的问题
-        this.getTabBar().init();
+      wx.showLoading({
+        title: "加载中",
+      })
+      wxhttp.simList({
+        data: {
+          
+        },
+        success(res) {
+          wx.hideLoading()
+          // console.log(res)
+          if (res.state == 0) {
+            callback()
+          } else {
+            wx.showToast({
+              title: "失败,请重试",
+              icon: "none"
+            })
+          }
+        },
+        fail() {
+          wx.hideLoading()
+          wx.showToast({
+            title: "失败,请重试",
+            icon: "none"
+          })
+        }
+      }).then((res) => {
+        console.log(111)
+        console.log(res)
+        this.setData({list: res.data})
+      })
     },
 
     /**
@@ -64,14 +95,10 @@ Page({
     onShareAppMessage: function () {
 
     },
-    simBind: function(){
+    simInfo: function (e) {
+      console.log(e)
       wx.navigateTo({
-        url: '../simBind/index'
-      })
-    },
-    simList: function(){
-      wx.navigateTo({
-        url: '../simList/index'
+        url: '../simInfo/index'
       })
     }
 })

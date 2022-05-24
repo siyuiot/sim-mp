@@ -31,14 +31,14 @@ const request = (url, method, data) => {
   } else {
     token = wx.getStorageSync('token')
   }
-  // token = wx.getStorageSync('token')
+  token = wx.getStorageSync('token')
 
   let that = this
   return new Promise((resolve, reject) => {
     wx.request({
       url: _url,
       method: method,
-      data: JSON.stringify(data),
+      data: JSON.stringify(data.data),
       header: {
         Authorization: "Bearer " + token,
         APP_VER: "minapp-1.0",
@@ -72,12 +72,10 @@ const request = (url, method, data) => {
             wx.hideLoading()
             // console.log("reject")
             reject(res.data)
-            if (url != (conf.service.getUserPreInfoUrl)) {
-              wx.showToast({
-                title: res.data.state_info,
-                icon: 'none'
-              })
-            }
+            wx.showToast({
+              title: res.data.stateInfo,
+              icon: 'none'
+            })
           }
         }
       },
@@ -115,10 +113,16 @@ Promise.prototype.finally = function(callback) {
 module.exports = {
   login,
   request,
-  orderList: (data) => {
-    return request(conf.service.orderListUrl, 'post', data)
+  simBind: (data) => {
+    return request(conf.service.simBindUrl, 'post', data)
   },
-  getUserInfo: (data) => {
-    return request(conf.service.getUseInfoUrl, 'post', data)
+  simList: (data) => {
+    return request(conf.service.simListUrl, 'post', data)
   },
+  simInfo: (data) => {
+    return request(conf.service.simInfoUrl, 'post', data)
+  },
+  productList: (data) => {
+    return request(conf.service.productListUrl, 'post', data)
+  }
 }

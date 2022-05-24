@@ -12,6 +12,18 @@ const config = {
     // 登录地址，用于建立会话
     loginUrl: `https://${host}/user/login/minapp`,
 
+    // 用户sim绑定
+    simBindUrl: `https://${host}/userSim/bind`,
+
+    // 用户sim列表
+    simListUrl: `https://${host}/userSim/get/list`,
+
+    // 用户sim信息
+    simInfoUrl: `https://${host}/userSim/get/info`,
+
+    // 商品列表
+    productListUrl: `https://${host}/product/get/list`,
+
     // 获取用户信息
     getUseInfoUrl: `https://${host}/app/user/getuserinfo`,
 

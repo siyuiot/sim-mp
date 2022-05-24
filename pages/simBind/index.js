@@ -1,4 +1,6 @@
-// pages/zf/zf.js
+
+let wxhttp = require("../../utils/wxhttp.js") //封装request请求
+
 Page({
 
     /**
@@ -12,7 +14,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      console.log("onLoad")
     },
 
     /**
@@ -26,8 +28,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // 处理自定义tabbar 图标需要点击两次的问题
-        this.getTabBar().init();
+        
     },
 
     /**
@@ -64,14 +65,37 @@ Page({
     onShareAppMessage: function () {
 
     },
-    simBind: function(){
-      wx.navigateTo({
-        url: '../simBind/index'
+    formSubmit(e) {
+      console.log('form发生了submit事件，携带数据为：', e.detail.value)
+      wx.showLoading({
+        title: "绑定中",
       })
-    },
-    simList: function(){
-      wx.navigateTo({
-        url: '../simList/index'
+      wxhttp.simBind({
+        data: {
+          iccid: e.detail.value.iccid,
+          pku: e.detail.value.pku
+        },
+        success(res) {
+          wx.hideLoading()
+          // console.log(res)
+          if (res.state == 0) {
+            console.log("bind success")
+            wx.navigateBack({})
+            callback()
+          } else {
+            wx.showToast({
+              title: "失败,请重试",
+              icon: "none"
+            })
+          }
+        },
+        fail() {
+          wx.hideLoading()
+          wx.showToast({
+            title: "失败,请重试",
+            icon: "none"
+          })
+        }
       })
     }
 })

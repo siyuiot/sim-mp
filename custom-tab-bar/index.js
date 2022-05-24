@@ -14,7 +14,7 @@ Component({
 			},
 			{
 				icon: 'location',
-				text: '志峰',
+				text: '帮助',
 				url: '/pages/zf/zf'
 			}
 		]

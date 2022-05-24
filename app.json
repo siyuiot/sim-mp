@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/home/home",
-    "pages/zf/zf"
+    "pages/zf/zf",
+    "pages/simBind/index",
+    "pages/simList/index",
+    "pages/simInfo/index",
+    "pages/productList/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

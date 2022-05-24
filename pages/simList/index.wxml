@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="page-body">
+  <view class="page-section">
+    <view wx:for="{{list}}" class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item flex-item-V">
+        <view style="white-space:pre-wrap">卡编号:{{item.sid}}</view>
+        <view style="white-space:pre-wrap">simNo:{{item.simNo}}</view>
+        <button bindtap="simInfo">卡{{item.sid}}详情</button>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>
