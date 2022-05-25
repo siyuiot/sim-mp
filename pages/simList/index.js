@@ -14,6 +14,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
     },
 
     /**
@@ -96,9 +97,9 @@ Page({
 
     },
     simInfo: function (e) {
-      console.log(e)
+      let sid = e.currentTarget.dataset.sid
       wx.navigateTo({
-        url: '../simInfo/index'
+        url: '../simInfo/index?sid='+sid
       })
     }
 })

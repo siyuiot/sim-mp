@@ -45,6 +45,7 @@ const login = function(e,that,callback){
 					})
 					callback()
 				} else {
+          console.log(res)
 					wx.showToast({
 						title: "登录失败,请重试",
 						icon: "none"
