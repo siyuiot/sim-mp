@@ -73,5 +73,15 @@ Page({
       wx.navigateTo({
         url: '../simList/index'
       })
+    },
+    simInfo: function(){
+      wx.navigateTo({
+        url: '../simInfo/index'
+      })
+    },
+    productList: function(){
+      wx.navigateTo({
+        url: '../productList/index'
+      })
     }
 })
