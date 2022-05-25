@@ -7,7 +7,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-      info: {}
+      info: {},
+      sid:1
     },
 
     /**
@@ -96,7 +97,7 @@ Page({
     },
     productList: function () {
       wx.navigateTo({
-        url: '../productList/index'
+        url: `/pages/productList/index?sid=${this.data.sid}`
       })
     }
 })

@@ -14,7 +14,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      
     },
 
     /**
@@ -31,6 +30,7 @@ Page({
       wx.showLoading({
         title: "加载中",
       })
+      
       wxhttp.simList({
         data: {
           
