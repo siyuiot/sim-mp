@@ -1,0 +1,10 @@
+<view class="nav-card">
+    <view class="nav-icon-box">
+        <van-icon name="{{icon}}" class="nav-icon" />
+    </view>
+    <view class="nav-content">
+        <view>{{text}}</view>
+        <slot></slot>
+    </view>
+    <van-icon name="arrow" color="#999" />
+</view>

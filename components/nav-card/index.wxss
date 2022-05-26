@@ -1,0 +1,23 @@
+.nav-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30rpx 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    margin-bottom: 10px;
+}
+.nav-icon-box{
+    width: 50rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-icon{
+    border-radius: 50%;
+}
+.nav-content{
+    flex: 1;
+    margin: 0 30rpx;
+}

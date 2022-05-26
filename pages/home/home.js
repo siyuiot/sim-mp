@@ -9,6 +9,7 @@ Page({
         myPhoto: "/assets/images/icon.png",
         phoneNumber: "", //手机号
         isLogined:false,
+        cardInfo:{text:'帮助中心'}
     },
 
     /**
@@ -73,5 +74,10 @@ Page({
       login.login(e,that,function(){
         // that.getUserStatus()
       })
+    },
+    toSim(){
+        wx.navigateTo({
+          url: '/pages/simBind/index',
+        })
     }
 })
