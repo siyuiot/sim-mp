@@ -5,7 +5,7 @@
       <view class="flex-item flex-item-V">
         <view style="white-space:pre-wrap">卡编号:{{item.sid}}</view>
         <view style="white-space:pre-wrap">simNo:{{item.simNo}}</view>
-        <button bindtap="simInfo">详情</button>
+        <button bindtap="simInfo" data-sid="{{item.sid}}">详情</button>
       </view>
     </view>
   </view>

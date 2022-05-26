@@ -1,5 +1,6 @@
 
 let wxhttp = require("../../utils/wxhttp.js") //封装request请求
+let util = require("../../utils/util.js") //封装request请求
 
 Page({
 
@@ -8,14 +9,14 @@ Page({
      */
     data: {
       info: {},
-      sid:1
+      urlParamSid: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      
+      this.setData({urlParamSid: parseInt(options.sid)})
     },
 
     /**
@@ -34,7 +35,7 @@ Page({
       })
       wxhttp.simInfo({
         data: {
-          sid: 1
+          sid: this.data.urlParamSid
         },
         success(res) {
           wx.hideLoading()
@@ -57,7 +58,10 @@ Page({
         }
       }).then((res) => {
         console.log(res)
-        this.setData({info: res.data})
+        let vData = {info: res.data}
+        vData.info.bindAt = util.formatTime(new Date(vData.info.bindTs * 1000))
+        vData.info.serviceEndAt = util.formatTime(new Date(vData.info.serviceEndTs * 1000))
+        this.setData(vData)
       })
     },
 
@@ -94,10 +98,5 @@ Page({
      */
     onShareAppMessage: function () {
 
-    },
-    productList: function () {
-      wx.navigateTo({
-        url: `/pages/productList/index?sid=${this.data.sid}`
-      })
     }
 })

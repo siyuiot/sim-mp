@@ -43,7 +43,7 @@ const request = (url, method, data) => {
         Authorization: "Bearer " + token,
         APP_VER: "minapp-1.0",
         Ts: date,
-        SGAGENT: "MINI|||||com.sharkgulf.blueshark|||"
+        SGAGENT: "MP|||||com.siyu.iot|||"
       },
       success(res) {
         // console.log(res, url)
