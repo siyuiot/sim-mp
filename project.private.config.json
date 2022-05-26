@@ -12,41 +12,17 @@
           "query": "",
           "scene": null
         },
-<<<<<<< HEAD
-        "game": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "pages/home/home",
-                    "pathName": "pages/home/home",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/zf/zf",
-                    "pathName": "pages/zf/zf",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/index/index",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                }
-            ]
-=======
         {
           "name": "pages/zf/zf",
           "pathName": "pages/zf/zf",
           "query": "",
           "scene": null
->>>>>>> 3cb156f9dd54e40c24d103142f840fdac1c03044
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
