@@ -24,6 +24,12 @@
                     "pathName": "pages/zf/zf",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,4 +1,14 @@
 /**index.wxss**/
+page{
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  padding: 40rpx;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;

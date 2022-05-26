@@ -6,9 +6,7 @@ page {
   
   .wrapper {
     min-height: 100%;
-    padding-bottom: 1rpx;
     box-sizing: border-box;
-    /* background-color: #e8e8e8; */
     background: #f4f4f4;
   }
   

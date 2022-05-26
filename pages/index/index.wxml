@@ -1,6 +1,8 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
+<view class="wrapper">
+  <nav-card icon="bell" text="严禁将SIM卡插入手机" bindtap="toSim"></nav-card>
+  <nav-card icon="todo-list" text="快速指南" bindtap="toSim"></nav-card>
+  <!-- <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar" bindtap="bindViewTap">
         <open-data type="userAvatarUrl"></open-data>
@@ -19,5 +21,5 @@
   </view>
   <view class="usermotto">
     
-  </view>
+  </view> -->
 </view>
