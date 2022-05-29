@@ -2,13 +2,14 @@
   <view class="page-body">
   <view class="page-section">
     <view style="white-space:pre-wrap">sim卡编号:{{sid}}</view>
+    <view style="white-space:pre-wrap">-------------------------------------</view>
     <view wx:for="{{list}}" class="flex-wrp" style="flex-direction:column;">
       <view class="flex-item flex-item-V">
         <view style="white-space:pre-wrap">商品编号:{{item.skuId}}</view>
         <view style="white-space:pre-wrap">商品名称:{{item.name}}</view>
         <view style="white-space:pre-wrap">商品价格:{{item.price}}</view>
         <view style="white-space:pre-wrap">商品描述:{{item.des}}</view>
-        <button bindtap="simOrder" data-sid="{{sid}}" data-skuid="{{item.skuid}}">购买</button>
+        <button bindtap="simOrder" data-sid="{{sid}}" data-skuid="{{item.skuId}}">购买</button>
       </view>
     </view>
   </view>

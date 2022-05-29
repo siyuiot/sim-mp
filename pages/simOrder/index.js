@@ -143,7 +143,7 @@ Page({
           appId: wxconf.app.appid,
           openId: openId,
           sid: this.data.urlParamSid,
-          skuId: this.data.productInfo.skuId
+          skuId: this.data.urlParamSkuId
         },
         success(res) {
           wx.hideLoading()

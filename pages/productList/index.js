@@ -99,6 +99,7 @@ Page({
     simOrder: function (e) {
       let sid = e.currentTarget.dataset.sid
       let skuId = e.currentTarget.dataset.skuid
+      console.log(e.currentTarget.dataset)
       wx.navigateTo({
         url: '../simOrder/index?sid='+sid+'&skuId='+skuId
       })

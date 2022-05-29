@@ -4,8 +4,10 @@
     <view class="flex-wrp" style="flex-direction:column;">
       <view class="flex-item flex-item-V">
         <view style="white-space:pre-wrap">卡编号:{{simInfo.sid}}</view>
+        <view style="white-space:pre-wrap">sim卡提供商:{{simInfo.simProvider}}</view>
         <view style="white-space:pre-wrap">simNo:{{simInfo.simNo}}</view>
-        <view style="white-space:pre-wrap">--------------------------------</view>
+        <view style="white-space:pre-wrap">iccid:{{simInfo.iccid}}</view>
+        <view style="white-space:pre-wrap">-------------------------------------</view>
         <view style="white-space:pre-wrap">商品编号:{{productInfo.skuId}}</view>
         <view style="white-space:pre-wrap">商品名称:{{productInfo.name}}</view>
         <view style="white-space:pre-wrap">商品价格:{{productInfo.price}}</view>

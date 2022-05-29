@@ -4,7 +4,9 @@
     <view wx:for="{{list}}" class="flex-wrp" style="flex-direction:column;">
       <view class="flex-item flex-item-V">
         <view style="white-space:pre-wrap">卡编号:{{item.sid}}</view>
+        <view style="white-space:pre-wrap">sim卡提供商:{{item.simProvider}}</view>
         <view style="white-space:pre-wrap">simNo:{{item.simNo}}</view>
+        <view style="white-space:pre-wrap">iccid:{{item.iccid}}</view>
         <button bindtap="simInfo" data-sid="{{item.sid}}">详情</button>
       </view>
     </view>

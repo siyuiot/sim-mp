@@ -3,8 +3,10 @@
   <view class="page-section">
     <view class="flex-wrp" style="flex-direction:column;">
       <view class="flex-item flex-item-V">
-        <!-- <view style="white-space:pre-wrap">sim卡编号:{{info.sid}}</view> -->
+        <view style="white-space:pre-wrap">sim卡编号:{{info.sid}}</view>
+        <view style="white-space:pre-wrap">sim卡提供商:{{info.simProvider}}</view>
         <view style="white-space:pre-wrap">simNo:{{info.simNo}}</view>
+        <view style="white-space:pre-wrap">iccid:{{info.iccid}}</view>
         <view style="white-space:pre-wrap">用户使用开始时间:{{info.bindAt}}</view>
         <view style="white-space:pre-wrap">用户使用截止时间:{{info.serviceEndAt}}</view>
         <view style="white-space:pre-wrap">用户购买套餐时长:{{info.serviceDuration}}</view>

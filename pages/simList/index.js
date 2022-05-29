@@ -56,7 +56,6 @@ Page({
           })
         }
       }).then((res) => {
-        console.log(111)
         console.log(res)
         this.setData({list: res.data})
       })
