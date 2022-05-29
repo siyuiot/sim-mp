@@ -1,0 +1,23 @@
+/* pages/simActive/index.wxss */
+.wrapper{
+    min-width: 100%;
+}
+.steps{
+    padding: 30rpx 60rpx;
+}
+.center{
+    text-align: center;
+}
+.content{
+    text-align: center;
+    margin-bottom: 80rpx;
+}
+.sim-form{
+    margin: 10rpx;
+}
+.btn-next{
+    width: 100%;
+    position: absolute;
+    bottom: 100rpx;
+    text-align: center;
+}

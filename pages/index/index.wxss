@@ -3,12 +3,17 @@ page{
   height: 100%;
 }
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100%;
   box-sizing: border-box;
   background: #f4f4f4;
   padding: 40rpx;
 }
+.top{
 
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -26,4 +31,8 @@ page{
 
 .usermotto {
   margin-top: 200px;
+}
+.content{
+  text-align: center;
+  margin-bottom: 200rpx;
 }

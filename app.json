@@ -7,7 +7,8 @@
     "pages/simBind/index",
     "pages/simList/index",
     "pages/simInfo/index",
-    "pages/productList/index"
+    "pages/productList/index",
+    "pages/simActive/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -35,7 +36,9 @@
   "usingComponents": {
     "nav-card":"/components/nav-card/index",
     "van-button": "@vant/weapp/button/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "van-steps": "@vant/weapp/steps/index",
+    "van-field": "@vant/weapp/field/index"
   },  
   "sitemapLocation": "sitemap.json"
 }

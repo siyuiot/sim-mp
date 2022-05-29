@@ -49,4 +49,10 @@ Page({
       hasUserInfo: true
     })
   },
+
+  toActiveSim(){
+    wx.navigateTo({
+      url: '/pages/simActive/index',
+    })
+  }
 })

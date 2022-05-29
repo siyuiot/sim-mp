@@ -1,0 +1,19 @@
+<!--pages/simActive/index.wxml-->
+<view class="wrapper">
+    <view class="steps">
+        <van-steps steps="{{ steps }}" active="{{ active }}" active-color="#1989fa" />
+    </view>
+    <view class="content">
+        <image style="width: 200px; height: 200px;margin: 20rpx;" src="/assets/images/card.png"></image>
+        <van-button round type="info" custom-style="padding:30rpx 60rpx" bindtap="scanSim">扫一扫 SIM 卡 ICCID</van-button>
+    </view>
+    <view class="sim-form">
+        <van-cell-group>
+            <van-field value="{{ simValue }}" required clearable label="ICCID" placeholder="手动输入" bind:change="onChange" />
+            <van-field value="{{ simValue }}" clearable label="卡命名" placeholder="手动输入" bind:change="onChange" />
+        </van-cell-group>
+    </view>
+    <view class="btn-next">
+        <van-button disabled="{{nextDisabled}}" round type="info" custom-style="padding:30rpx 60rpx;width:396rpx" bindtap="toActiveSim">下一步</van-button>
+    </view>
+</view>
