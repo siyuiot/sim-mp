@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="page-body">
+  <view class="page-section">
+    <view class="flex-wrp" style="flex-direction:column;">
+      <view class="flex-item flex-item-V">
+        <view style="white-space:pre-wrap">卡编号:{{simInfo.sid}}</view>
+        <view style="white-space:pre-wrap">simNo:{{simInfo.simNo}}</view>
+        <view style="white-space:pre-wrap">--------------------------------</view>
+        <view style="white-space:pre-wrap">商品编号:{{productInfo.skuId}}</view>
+        <view style="white-space:pre-wrap">商品名称:{{productInfo.name}}</view>
+        <view style="white-space:pre-wrap">商品价格:{{productInfo.price}}</view>
+        <view style="white-space:pre-wrap">商品描述:{{productInfo.des}}</view>
+        <button bindtap="simOrderPayment">支付</button>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

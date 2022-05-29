@@ -1,8 +1,8 @@
 <!--pages/zf/zf.wxml-->
 <view>
     <button bindtap="simBind">sim卡绑定</button>
-    <button bindtap="simList">我的卡包</button>
+    <!-- <button bindtap="simList">我的卡包</button> -->
     <button bindtap="simInfo">我的套餐</button>
-    <button bindtap="productList">套餐购买</button>
-    <button>帮助</button>
+    <!-- <button bindtap="productList">套餐购买</button> -->
+    <!-- <button>帮助</button> -->
 </view>

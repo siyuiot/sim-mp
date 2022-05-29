@@ -8,7 +8,8 @@
     "pages/simList/index",
     "pages/simInfo/index",
     "pages/productList/index",
-    "pages/simActive/index"
+    "pages/simActive/index",
+    "pages/simOrder/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

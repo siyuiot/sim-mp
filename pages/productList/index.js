@@ -8,14 +8,15 @@ Page({
      */
     data: {
       list: [],
-      sid:0,
+      sid: 0
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      this.setData({sid:options.sid})
+      console.log(options)
+      this.setData({sid: parseInt(options.sid)})
     },
 
     /**
@@ -94,5 +95,12 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    simOrder: function (e) {
+      let sid = e.currentTarget.dataset.sid
+      let skuId = e.currentTarget.dataset.skuid
+      wx.navigateTo({
+        url: '../simOrder/index?sid='+sid+'&skuId='+skuId
+      })
     }
 })

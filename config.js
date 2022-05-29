@@ -22,49 +22,13 @@ const config = {
     simInfoUrl: `https://${host}/userSim/get/info`,
 
     // 商品列表
-    productListUrl: `https://${host}/product/get/list`,
+    productListUrl: `https://${host}/productSku/get/list`,
 
-    // 获取用户信息
-    getUseInfoUrl: `https://${host}/app/user/getuserinfo`,
+    // 商品信息
+    productInfoUrl: `https://${host}/productSku/get/info`,
 
-    // 获取openid
-    getOpenIdUrl: `https://${host}/wechat/code2Session`,
-
-    // 支付
-    pingppPayUrl: `https://${host}/app/order/pingpppay`,
-
-    //预订订单是否已支付
-    bookIsPayUrl: `https://${host}/app/order/book/isPay`,
-    
-    //预定商品固定参数（车的类型价格颜色）
-    getProductsUrl: `https://${host}/app/order/book/products`,
-
-    // 用户预约信息
-    getUserPreInfoUrl: `https://${host}/preorder/detail`,
-
-    // 预订使用的预约信息(包括预约号、群)
-    getPreInfoUrl: `https://${host}/preorder/book/info`,
-
-    // 预定订单创建
-    createBookUrl: `https://${host}/app/order/book/submit`,
-
-    // 预订订单详情
-    getBookDetailUrl: `https://${host}/app/order/book/detail`,
-
-    // 预订单列表
-    // getOrderListUrl: `https://${host}/app/order/book/orders`,
-
-    // 取消订单
-    cancelOrderUrl: `https://${host}/app/order/book/cancel`,
-
-    // 修改订单
-    updateOrderUrl: `https://${host}/app/order/book/update`,
-
-    // 发送短信验证码
-    sendSmsvcUrl: `https://${host}/app/user/sendsmsvc`,
-
-    //验证短信验证码
-    validateSmsvcUrl: `https://${host}/app/user/validatesmsvc`,
+    // 订单支付
+    simOrderPaymentUrl: `https://${host}/simOrder/payment`,
   },
 
   // 下面是APP的属性

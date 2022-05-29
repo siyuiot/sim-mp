@@ -98,5 +98,11 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    productList: function (e) {
+      let sid = e.currentTarget.dataset.sid
+      wx.navigateTo({
+        url: '../productList/index?sid='+sid
+      })
     }
 })

@@ -12,7 +12,8 @@ const login = function(e,that,callback){
 	}
 	wx.showLoading({
 		title: "登录中",
-	})
+  })
+  // getPhoneNumber 返回的 code 与 wx.login 返回的 code 作用是不一样的，不能混用
 	wxauth.useWxCode(function(code, err) {
 		if (code == "") {
 			wx.hideLoading()
@@ -21,15 +22,17 @@ const login = function(e,that,callback){
 				icon: "none"
 			})
 			return false
-		}
+    }
+    console.log(code,e)
 		wxhttp.login({
 			data: {
 				minapp: {
 					appid: wxconf.app.appid,
-					code: e.detail.code,
+					code: code, // wx.login的code
 					iv: e.detail.iv,
 					encryptedData: e.detail.encryptedData
-				}
+        },
+        code: e.detail.code // getPhoneNumber按钮事件传递的code
 			},
 			success(res) {
         wx.hideLoading()
@@ -37,8 +40,9 @@ const login = function(e,that,callback){
 				if (res.state == 0) {
           console.log("login success")
 					wx.setStorageSync('token', res.data.token)
+					wx.setStorageSync("openId", res.data.openId)
 					wx.setStorageSync('pn', res.data.user.phoneNum)
-					wx.setStorageSync("user_id", res.data.user.uid)
+					wx.setStorageSync("uid", res.data.user.uid)
 					that.setData({
 						isLogined: true,
 						phoneNumber: res.data.user.phoneNum

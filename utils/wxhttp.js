@@ -124,5 +124,11 @@ module.exports = {
   },
   productList: (data) => {
     return request(conf.service.productListUrl, 'post', data)
+  },
+  productInfo: (data) => {
+    return request(conf.service.productInfoUrl, 'post', data)
+  },
+  simOrderPayment: (data) => {
+    return request(conf.service.simOrderPaymentUrl, 'post', data)
   }
 }
