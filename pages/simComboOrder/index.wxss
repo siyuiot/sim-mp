@@ -23,6 +23,7 @@ page{
 }
 .border{
     border-bottom: 2rpx solid #f1f1f1;
+    margin: 10rpx 0;
 }
 .red{
     color: red;
