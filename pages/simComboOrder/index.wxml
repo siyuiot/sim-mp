@@ -1,2 +1,28 @@
 <!--pages/simComboOrder/index.wxml-->
-<text>pages/simComboOrder/index.wxml</text>
+<view class="wrapper">
+    <view class="top">
+        <view class="item p20 lh40">
+            <view class="item-title">移动号码：</view>
+            <view class="item-content">1400187931968</view>
+        </view>
+        <view class="item p20 lh40">
+            <view class="item-title">ICCID：</view>
+            <view class="item-content">8986 0621 2800 6131 5501</view>
+        </view>
+        <view class="order-detail">
+            <view class="item lh60">
+                <view class="item-title">套餐</view>
+                <view class="item-content black">尊享年报套餐</view>
+            </view>
+            <view class="border"></view>
+            <view class="item lh60">
+                <view class="item-title">套餐金额：</view>
+                <view class="item-content red fw">¥ 5599.00</view>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="pay">实付<text class="red normal"> ¥ 599.00</text></view>
+        <van-button round type="info" custom-style="padding:20rpx 60rpx;width:600rpx;margin-top:40rpx" bindtap="toActiveSim">微信支付</van-button>
+    </view>
+</view>

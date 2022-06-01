@@ -44,6 +44,12 @@
                     "pathName": "pages/mySim/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/simComboOrder/index",
+                    "pathName": "pages/simComboOrder/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

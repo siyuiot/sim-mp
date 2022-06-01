@@ -1,1 +1,58 @@
 /* pages/simComboOrder/index.wxss */
+page{
+    height: 100%;
+    background: #f4f5f7;
+    /* background: #f4f4f4; */
+}
+.wrapper{
+    padding: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+.p20{
+    padding: 0 20rpx;
+}
+.lh40{
+    line-height: 46rpx;
+}
+.lh60{
+    line-height: 60rpx;
+}
+.border{
+    border-bottom: 2rpx solid #f1f1f1;
+}
+.red{
+    color: red;
+}
+.fw{
+    font-weight: 600;
+}
+.normal{
+    font-weight: normal;
+}
+.black{
+    color: black;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    color: #5f6368;
+    /* color: #999; */
+    font-weight: 300;
+    font-size: 28rpx;
+}
+
+.order-detail{
+    border-radius: 20rpx;
+    background-color: #fff;
+    padding: 20rpx;
+    margin-top: 40rpx;
+}
+.content{
+    text-align: center;
+    margin-bottom: 100rpx;
+    font-weight: 300;
+  }
