@@ -9,7 +9,10 @@
     "pages/simInfo/index",
     "pages/productList/index",
     "pages/simActive/index",
-    "pages/simOrder/index"
+    "pages/simOrder/index",
+    "pages/simCombo/index",
+    "pages/simComboOrder/index",
+    "pages/mySim/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -36,6 +39,7 @@
   },
   "usingComponents": {
     "nav-card":"/components/nav-card/index",
+    "sim-card":"/components/sim-card/index",
     "van-button": "@vant/weapp/button/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-steps": "@vant/weapp/steps/index",

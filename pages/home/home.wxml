@@ -10,8 +10,8 @@
     </view>
   </button>
   <view class="my-content">
-    <nav-card icon="cart" text="我的套餐" bindtap="toSim"></nav-card>
-    <nav-card icon="shopping-cart" text="套餐续费" bindtap="toSim"></nav-card>
+    <nav-card icon="cart" text="我的套餐" bindtap="toMySim"></nav-card>
+    <nav-card icon="shopping-cart" text="套餐续费" bindtap="toSimPay"></nav-card>
     <nav-card icon="chat" text="帮助中心" bindtap="toSim"></nav-card>
   </view>
 </view>

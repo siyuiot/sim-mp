@@ -1,0 +1,48 @@
+.wrapper{
+    padding: 40rpx;
+}
+.sim-card{
+    border-radius: 30rpx;
+    background-color: #4285f4;
+    padding: 20rpx 20rpx 0;
+}
+.sim-top{
+    padding: 20rpx;
+}
+.sim-num{
+    color: #fff;
+    font-size: 40rpx;
+    line-height: 50rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+}
+.sim-conent{
+    color: #ccdeff;
+    font-size: 28rpx;
+}
+.sim-iccid{
+    /* color: #dadce0; */
+    /* font-size: 28rpx; */
+}
+.combo-detail{
+    border-radius: 20rpx;
+    background-color: #79a4f0;
+    padding: 30rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #ccdeff;
+    margin: 60rpx 0 0 0;
+}
+.combo-remaining text{
+    font-size: 40rpx;
+    color: #fff;
+    /* margin-right: 10rpx; */
+}
+
+.china{
+    font-size: 24rpx;
+    color: #ccdeff;
+    line-height: 30rpx;
+    text-align: center;
+    padding: 10rpx 0;
+}

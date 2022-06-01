@@ -1,15 +1,11 @@
-const login = require('../../utils/login')
-// pages/home/home.js
+// pages/simCombo/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        myPhoto: "/assets/images/icon.png",
-        phoneNumber: "", //手机号
-        isLogined:false,
-        cardInfo:{text:'帮助中心'}
+
     },
 
     /**
@@ -29,10 +25,9 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow() {
-        // 处理自定义tabbar 图标需要点击两次的问题
-		this.getTabBar().init();
-	},
+    onShow: function () {
+
+    },
 
     /**
      * 生命周期函数--监听页面隐藏
@@ -67,22 +62,5 @@ Page({
      */
     onShareAppMessage: function () {
 
-    },
-    getPhoneNumber (e) {
-      // console.log(e.detail.code)
-      let that = this
-      login.login(e,that,function(){
-        // that.getUserStatus()
-      })
-    },
-    toMySim(){
-        wx.navigateTo({
-          url: '/pages/mySim/index',
-        })
-    },
-    toSimPay(){
-        wx.navigateTo({
-          url: '/pages/simCombo/index',
-        })
     }
 })

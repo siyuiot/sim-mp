@@ -1,0 +1,13 @@
+<view class="sim-card">
+        <view class="sim-top">
+            <view class="sim-num">1400187931968</view>
+            <view class="sim-iccid sim-conent">8986 0621 2800 6131 5501</view>
+            <view class="deadline sim-conent">使用截止时间：2022/06/01 21:07:08</view>
+            <view class="sim-time sim-conent">购买套餐时长：2022/06/01 21:07:08</view>
+        </view>
+        <view class="combo-detail">
+            <view class="combo-remaining"> <text>5.00</text> GB 剩余</view>
+            <view class="combo-total">总共5.00GB</view>
+        </view>
+        <view class="china">中国联通</view>
+    </view>

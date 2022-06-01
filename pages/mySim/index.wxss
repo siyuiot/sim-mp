@@ -1,0 +1,8 @@
+/* pages/mySim/index.wxss */
+page{
+    min-height: 100%;
+    background: #f4f4f4;
+}
+.wrapper{
+    padding: 40rpx;
+}
