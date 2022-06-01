@@ -12,31 +12,12 @@ page{
     min-height: 100%;
     box-sizing: border-box;
 }
-.p20{
-    padding: 0 20rpx;
-}
-.lh40{
-    line-height: 46rpx;
-}
-.lh60{
-    line-height: 60rpx;
-}
+
 .border{
     border-bottom: 2rpx solid #f1f1f1;
     margin: 10rpx 0;
 }
-.red{
-    color: red;
-}
-.fw{
-    font-weight: 600;
-}
-.normal{
-    font-weight: normal;
-}
-.black{
-    color: black;
-}
+
 .item{
     display: flex;
     justify-content: space-between;

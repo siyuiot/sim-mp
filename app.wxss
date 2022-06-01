@@ -8,3 +8,24 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 }  */
+.p20{
+  padding: 0 20rpx;
+}
+.lh40{
+  line-height: 46rpx;
+}
+.lh60{
+  line-height: 60rpx;
+}
+.red{
+  color: red;
+}
+.fw{
+  font-weight: 600;
+}
+.normal{
+  font-weight: normal;
+}
+.black{
+  color: black;
+}

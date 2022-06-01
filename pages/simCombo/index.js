@@ -62,5 +62,10 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    toComboOrder(){
+        wx.navigateTo({
+          url: '/pages/simComboOrder/index',
+        })
     }
 })

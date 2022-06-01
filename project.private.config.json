@@ -50,6 +50,12 @@
                     "pathName": "pages/simComboOrder/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/simCombo/index",
+                    "pathName": "pages/simCombo/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
