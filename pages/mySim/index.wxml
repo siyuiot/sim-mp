@@ -1,4 +1,4 @@
 <!--pages/mySim/index.wxml-->
 <view class="wrapper">
-    <sim-card></sim-card>
+    <sim-card cardInfo="{{simInfo}}"></sim-card>
 </view>

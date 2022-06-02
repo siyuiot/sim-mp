@@ -10,10 +10,10 @@
     <view class="sim-form">
         <van-cell-group>
             <van-field value="{{ simValue }}" required clearable label="ICCID" placeholder="手动输入" bind:change="onChange" />
-            <van-field value="{{ simValue }}" clearable label="卡命名" placeholder="手动输入" bind:change="onChange" />
+            <!-- <van-field value="{{ simValue }}" clearable label="卡命名" placeholder="手动输入" bind:change="onChange" /> -->
         </van-cell-group>
     </view>
     <view class="btn-next">
-        <van-button disabled="{{nextDisabled}}" round type="info" custom-style="padding:30rpx 60rpx;width:396rpx" bindtap="toActiveSim">下一步</van-button>
+        <van-button disabled="{{nextDisabled}}" round type="info" custom-style="padding:30rpx 60rpx;width:396rpx" bindtap="toCombo">下一步</van-button>
     </view>
 </view>

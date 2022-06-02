@@ -1,17 +1,34 @@
 // pages/simComboOrder/index.js
+let wxconf = require("../../config.js") //静态配置文件
+let wxhttp = require("../../utils/wxhttp.js") //封装request请求
+let util = require("../../utils/util.js") //封装request请求
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        simNo:'',
+        iccid:'',
+        urlParamSid: 0,
+        urlParamSkuId: 0,
+        combo:null,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        const simNo=wx.getStorageSync('simNo')
+        const iccid=wx.getStorageSync('iccid')
+        const combo=JSON.parse(wx.getStorageSync('combo'))
+        this.setData({
+            simNo,
+            iccid,
+            urlParamSid: parseInt(options.sid),
+            urlParamSkuId: parseInt(options.skuId),
+            combo
+        })
 
     },
 
@@ -62,5 +79,36 @@ Page({
      */
     onShareAppMessage: function () {
 
-    }
+    },
+    simOrderPayment: function () {
+        // 订单提交
+        wx.showLoading({
+          title: "加载中",
+        })
+        let openId = wx.getStorageSync("openId")
+        let req = {
+            appId: wxconf.app.appid,
+            openId: openId,
+            sid: this.data.urlParamSid,
+            skuId: this.data.urlParamSkuId
+        }
+        wxhttp.simOrderPayment(req).then((res) => {
+          console.log(res)
+          // 调起支付
+          wx.requestPayment({
+            timeStamp: res.data.timeStamp,
+            nonceStr: res.data.nonceStr,
+            package: res.data.package,
+            signType: res.data.signType,
+            paySign: res.data.paySign,
+            success (res) {
+              console.log(res)
+            },
+            fail (res) {
+              console.log(res)
+            }
+          })
+        })
+      }
+
 })

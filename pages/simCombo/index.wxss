@@ -40,18 +40,20 @@ page {
     position: relative;
 
 }
-
-.item1 {
-    margin-left: 80rpx;
+.item0{
+    margin: 0 15rpx;
+}
+.item-left{
+    margin-left: 65rpx;
 }
 
 .item2 {
     margin: 0 80rpx 0 30rpx;
 }
 
-/* .item3{
-    margin-right: 80rpx;
-  } */
+.item-right{
+    margin-right: 65rpx;
+  }
 
 .item {
     display: flex;

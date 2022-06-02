@@ -14,6 +14,13 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+function formatPrice(value) {
+  if (isNaN(value)) {
+    return "";
+  }
+  return (value / 100).toFixed(2);
+}
 module.exports = {
-  formatTime
+  formatTime,
+  formatPrice
 }

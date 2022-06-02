@@ -38,7 +38,7 @@ const request = (url, method, data) => {
     wx.request({
       url: _url,
       method: method,
-      data: JSON.stringify(data.data),
+      data: JSON.stringify(data),
       header: {
         Authorization: "Bearer " + token,
         APP_VER: "minapp-1.0",
@@ -62,7 +62,7 @@ const request = (url, method, data) => {
           //   })
           // }
           wx.reLaunch({
-            url: '/pages/index/index',
+            url: '/pages/home/home',
           })
         } else {
           if (res.data.state == 0) {

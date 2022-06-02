@@ -1,4 +1,6 @@
 // pages/simActive/index.js
+let wxhttp = require("../../utils/wxhttp.js") //封装request请求
+
 Page({
 
     /**
@@ -95,8 +97,49 @@ Page({
                 that.setData({
                     simValue:res.result
                 })
-            console.log(res)
+                if(this.data.simValue){
+                  this.setData({
+                    nextDisabled:false
+                  })
+                }
+            },
+            fail(){
+              wx.showToast({
+                title: '请重新扫码',
+                icon: 'error',
+                duration: 2000
+              })
+              
             }
         })
+    },
+    onChange(e){
+      this.setData({
+        simValue:e.detail
+      })
+      if(this.data.simValue){
+        this.setData({
+          nextDisabled:false
+        })
+      }
+    },
+    // 下一步 绑定sim卡 成功跳转到换电套餐
+    toCombo(){
+      let req = {
+          iccid: this.data.simValue,
+          pku: ''
+      }
+      wxhttp.simBind(req).then(res=>{
+        wx.showToast({
+          title: '绑卡成功',
+          icon: 'success',
+          duration: 2000,
+          success(){
+            wx.navigateTo({
+              url: '/pages/simCombo/index',
+            })
+          }
+        })
+      })
     }
 })

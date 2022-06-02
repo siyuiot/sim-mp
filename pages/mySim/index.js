@@ -1,18 +1,29 @@
 // pages/mySim/index.js
+const wxhttp =require('../../utils/wxhttp')
+let util = require("../../utils/util.js") //封装request请求
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        simInfo:null,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        // 获取套餐信息
+        wx.showLoading({
+            title: "加载中",
+        })
+        wxhttp.simInfo({}).then(res => {
+            let simInfo=res.data
+            simInfo.serviceEndTs = util.formatTime(new Date(simInfo.serviceEndTs * 1000)).slice(0,10)
+            this.setData({simInfo})
+        })
     },
 
     /**

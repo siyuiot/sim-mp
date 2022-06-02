@@ -1,13 +1,13 @@
 <!--pages/simCombo/index.wxml-->
 <view class="wrapper">
     <view class="top">
-        <view class="item-title">移动号码：1400187931968</view>
-        <view class="item-content">ICCID：8986 0621 2800 6131 5501</view>
+        <view class="item-title">移动号码：{{simNo}}</view>
+        <view class="item-content">ICCID：{{iccid}}</view>
     </view>
     <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%;">
-        <view class="scroll-view-item_H item1 flex-column">
+        <view wx:for="{{list}}" wx:key="index" class="scroll-view-item_H item0 {{item.itemMargin}} flex-column">
             <view class="">
-                <view class="combo-title">尊享年包套餐</view>
+                <view class="combo-title">{{item.name}}</view>
                 <view class="item lh40">
                     <view class="item-title">流量：</view>
                     <view class="item-content">每月200GB</view>
@@ -19,38 +19,14 @@
                 <view class="item lh40 flex-start">
                     <view class="item-title">描述：</view>
                     <view class="item-content item-content-wrap">
-                        <view class="item-wrap">高速流量每月200GB</view>
+                        <view class="item-wrap">{{item.des}}</view>
                         <!-- <view class="item-wrap">高速流量每月200GB高速流量高速流量每月200GB高速流量高速流量每月200GB高速流量</view> -->
                     </view>
                 </view>
             </view>
             <view class="pay-combo">
-                <view class="pay red normal">¥ 599.00</view>
-                <van-button round type="info" size="small" custom-style="padding:30rpx 50rpx;width:300rpx;margin-top:20rpx" bindtap="toComboOrder" color="red">购买</van-button>
-            </view>
-        </view>
-        <view class="scroll-view-item_H item2 flex-column">
-            <view class="">
-                <view class="combo-title">尊享年包套餐</view>
-                <view class="item lh40">
-                    <view class="item-title">流量：</view>
-                    <view class="item-content">每月200GB</view>
-                </view>
-                <view class="item lh40">
-                    <view class="item-title">有效期：</view>
-                    <view class="item-content">365天</view>
-                </view>
-                <view class="item lh40 flex-start">
-                    <view class="item-title">描述：</view>
-                    <view class="item-content item-content-wrap">
-                        <view class="item-wrap">高速流量每月200GB</view>
-                        <!-- <view class="item-wrap">高速流量每月200GB高速流量高速流量每月200GB高速流量高速流量每月200GB高速流量</view> -->
-                    </view>
-                </view>
-            </view>
-            <view class="pay-combo">
-                <view class="pay red normal">¥ 599.00</view>
-                <van-button round type="info" size="small" custom-style="padding:30rpx 50rpx;width:300rpx;margin-top:20rpx" bindtap="toComboOrder" color="red">购买</van-button>
+                <view class="pay red normal">¥ {{item.price}}</view>
+                <van-button round type="info" size="small" custom-style="padding:30rpx 50rpx;width:300rpx;margin-top:20rpx" bindtap="toComboOrder" color="red" data-combo="{{item}}">购买</van-button>
             </view>
         </view>
     </scroll-view>
