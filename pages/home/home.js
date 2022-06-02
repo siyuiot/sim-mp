@@ -111,6 +111,13 @@ Page({
         }
       })
   },
+  idCard(){
+    wx.navigateToMiniProgram({
+      appId: 'wxa5b3db0cd2c5a1ed',
+      path: 'pages/index/index',
+      success(res) { }
+    })
+  },
   help(){
     wx.navigateTo({
       url: '/pages/zf/zf',

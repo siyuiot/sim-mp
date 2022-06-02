@@ -10,11 +10,11 @@
                 <view class="combo-title">{{item.name}}</view>
                 <view class="item lh40">
                     <view class="item-title">流量：</view>
-                    <view class="item-content">每月200GB</view>
+                    <view class="item-content">每月300GB</view>
                 </view>
                 <view class="item lh40">
                     <view class="item-title">有效期：</view>
-                    <view class="item-content">365天</view>
+                    <view class="item-content">{{item.duration}}月</view>
                 </view>
                 <view class="item lh40 flex-start">
                     <view class="item-title">描述：</view>

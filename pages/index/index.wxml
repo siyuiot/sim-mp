@@ -2,7 +2,7 @@
 <view class="wrapper">
   <view class="top">
     <nav-card icon="bell" text="严禁将SIM卡插入手机" bindtap="toSim"></nav-card>
-    <nav-card icon="todo-list" text="快速指南" bindtap="toSim"></nav-card>
+    <!-- <nav-card icon="todo-list" text="快速指南" bindtap="toSim"></nav-card> -->
     <sim-card wx:if="{{simInfo}}" cardInfo="{{simInfo}}"></sim-card>
   </view>
   <view class="content">

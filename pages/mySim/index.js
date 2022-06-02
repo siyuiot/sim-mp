@@ -22,6 +22,8 @@ Page({
         wxhttp.simInfo({}).then(res => {
             let simInfo=res.data
             simInfo.serviceEndTs = util.formatTime(new Date(simInfo.serviceEndTs * 1000)).slice(0,10)
+            simInfo.simByte = simInfo.simByte/1024/1024
+            simInfo.simAvailableByte = simInfo.simAvailableByte/1024/1024
             this.setData({simInfo})
         })
     },

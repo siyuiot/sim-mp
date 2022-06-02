@@ -12,7 +12,8 @@
   <view class="my-content">
     <nav-card icon="cart" text="我的套餐" bindtap="toMySim" wx:if="{{isCombo}}"></nav-card>
     <nav-card icon="shopping-cart" text="套餐续费" bindtap="toSimPay" wx:if="{{isCombo}}"></nav-card>
-    <nav-card icon="chat" text="帮助中心" bindtap="toSim"></nav-card>
+    <nav-card icon="todo-list" text="实名认证" bindtap="idCard"></nav-card>
+    <!-- <nav-card icon="chat" text="帮助中心" bindtap="toSim"></nav-card> -->
   </view>
   <text class="help" bindtap="help">帮助</text>
 </view>
