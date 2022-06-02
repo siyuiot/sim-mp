@@ -1,9 +1,12 @@
 // index.js
 // 获取应用实例
 const app = getApp()
+const wxhttp = require('../../utils/wxhttp')
+let util = require("../../utils/util.js") //封装request请求
 
 Page({
   data: {
+    simInfo: null,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -19,14 +22,28 @@ Page({
   },
   onShow() {
     // 处理自定义tabbar 图标需要点击两次的问题
-		this.getTabBar().init();
-	},
+    this.getTabBar().init();
+  },
   onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
+    if (wx.getStorageSync("token") && wx.getStorageSync("pn")) {
+      // 获取套餐信息
+      wx.showLoading({
+        title: "加载中",
       })
+      wxhttp.simInfo({}).then(res => {
+        let simInfo = res.data
+        if (simInfo) {
+          simInfo.serviceEndTs = util.formatTime(new Date(simInfo.serviceEndTs * 1000)).slice(0, 10)
+        }
+        this.setData({ simInfo })
+      })
+      if (wx.getUserProfile) {
+        this.setData({
+          canIUseGetUserProfile: true
+        })
+      }
     }
+
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
@@ -50,7 +67,7 @@ Page({
     })
   },
 
-  toActiveSim(){
+  toActiveSim() {
     wx.navigateTo({
       url: '/pages/simActive/index',
     })

@@ -1,5 +1,5 @@
 const login = require('../../utils/login')
-const wxhttp =require('../../utils/wxhttp')
+const wxhttp = require('../../utils/wxhttp')
 // pages/home/home.js
 Page({
 
@@ -11,7 +11,7 @@ Page({
     phoneNumber: "", //手机号
     isLogined: false,
     cardInfo: { text: '帮助中心' },
-    isCombo:false,
+    isCombo: false,
   },
 
   /**
@@ -39,20 +39,9 @@ Page({
         isLogined: true,
         phoneNumber: wx.getStorageSync("pn")
       })
+      this.getSimInfo()
     }
-    // 获取套餐信息
-    wx.showLoading({
-      title: "加载中",
-    })
-    wxhttp.simInfo({}).then(res=>{
-      if(res.data.iccid){
-        this.setData({isCombo:true})
-					wx.setStorageSync('simNo', res.data.simNo)
-          wx.setStorageSync('iccid', res.data.iccid)
-      }else{
-        this.setData({isCombo:false})
-      }
-    })
+
   },
 
   /**
@@ -94,6 +83,7 @@ Page({
     let that = this
     login.login(e, that, function () {
       // that.getUserStatus()
+      that.getSimInfo()
     })
   },
   toMySim() {
@@ -104,6 +94,26 @@ Page({
   toSimPay() {
     wx.navigateTo({
       url: '/pages/simCombo/index',
+    })
+  },
+  getSimInfo(){
+      // 获取套餐信息
+      wx.showLoading({
+        title: "加载中",
+      })
+      wxhttp.simInfo({}).then(res => {
+        if (res.data.iccid) {
+          this.setData({ isCombo: true })
+          wx.setStorageSync('simNo', res.data.simNo)
+          wx.setStorageSync('iccid', res.data.iccid)
+        } else {
+          this.setData({ isCombo: false })
+        }
+      })
+  },
+  help(){
+    wx.navigateTo({
+      url: '/pages/zf/zf',
     })
   }
 })

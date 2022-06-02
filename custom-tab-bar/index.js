@@ -12,11 +12,11 @@ Component({
 				text: '我的',
 				url: '/pages/home/home'
 			},
-			{
-				icon: 'location',
-				text: '帮助',
-				url: '/pages/zf/zf'
-			}
+			// {
+			// 	icon: 'location',
+			// 	text: '帮助',
+			// 	url: '/pages/zf/zf'
+			// }
 		]
 	},
 

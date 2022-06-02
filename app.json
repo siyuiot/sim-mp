@@ -31,9 +31,6 @@
       },
       { 
         "pagePath": "pages/home/home"
-      },
-      { 
-        "pagePath": "pages/zf/zf"
       }
     ]
   },

@@ -1,13 +1,13 @@
 <view class="sim-card">
-        <view class="sim-top">
-            <view class="sim-num">{{cardInfo.simNo}}</view>
-            <view class="sim-iccid sim-conent">{{cardInfo.iccid}}</view>
-            <view class="deadline sim-conent">使用截止时间：{{cardInfo.serviceDuration}}</view>
-            <view class="sim-time sim-conent">购买套餐时长：{{cardInfo.serviceEndTs}}</view>
-        </view>
-        <view class="combo-detail">
-            <view class="combo-remaining"> <text>{{cardInfo.simAvailableByte}}</text> GB 剩余</view>
-            <view class="combo-total">总共{{cardInfo.simByte}}GB</view>
-        </view>
-        <view class="china">{{cardInfo.simProvider}}</view>
+    <view class="sim-top">
+        <view class="sim-num">{{cardInfo.simNo}}</view>
+        <view class="sim-iccid sim-conent">{{cardInfo.iccid}}</view>
+        <view class="deadline sim-conent">使用截止时间：{{cardInfo.serviceEndTs}}</view>
+        <view class="sim-time sim-conent">购买套餐时长：{{cardInfo.serviceDuration}}月</view>
     </view>
+    <view class="combo-detail">
+        <view class="combo-remaining"> <text>{{cardInfo.simAvailableByte}}</text> GB 剩余</view>
+        <view class="combo-total">总共{{cardInfo.simByte}}GB</view>
+    </view>
+    <view class="china">{{cardInfo.simProvider}}</view>
+</view>

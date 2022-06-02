@@ -88,3 +88,6 @@ page {
       flex: 1;
       margin: 0 30rpx;
   }
+  .help{
+    opacity: 0;
+  }
