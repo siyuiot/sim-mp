@@ -20,7 +20,12 @@ function formatPrice(value) {
   }
   return (value / 100).toFixed(2);
 }
+
+function formatFlow(flow){//bite转GB
+  return (flow/1024/1024).toFixed(2)
+}
 module.exports = {
   formatTime,
-  formatPrice
+  formatPrice,
+  formatFlow
 }
