@@ -2,8 +2,8 @@
 <view class="wrapper">
     <view class="top">
         <view class="item p20 lh40">
-            <view class="item-title">移动号码：</view>
-            <view class="item-content">{{simNo}}</view>
+            <view class="item-title" style="width: 300rpx;">移动号码：</view>
+            <view class="item-content">移动号码：移动号码：移动号码：移动号码：移动号码：移动号码：移动号码：{{simNo}}</view>
         </view>
         <view class="item p20 lh40">
             <view class="item-title">ICCID：</view>

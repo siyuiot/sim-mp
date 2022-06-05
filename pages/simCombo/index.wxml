@@ -18,9 +18,8 @@
                 </view>
                 <view class="item lh40 flex-start">
                     <view class="item-title">描述：</view>
-                    <view class="item-content item-content-wrap">
-                        <view class="item-wrap">{{item.des}}</view>
-                        <!-- <view class="item-wrap">高速流量每月200GB高速流量高速流量每月200GB高速流量高速流量每月200GB高速流量</view> -->
+                    <view class="item-content item-wrap">
+                        {{item.des}}
                     </view>
                 </view>
             </view>
