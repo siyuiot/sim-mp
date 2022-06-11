@@ -24,6 +24,7 @@ Page({
             simInfo.serviceEndTs = util.formatTime(new Date(simInfo.serviceEndTs * 1000)).slice(0,10)
             simInfo.simByte = util.formatFlow(simInfo.simByte)
             simInfo.simAvailableByte = util.formatFlow(simInfo.simAvailableByte)
+            simInfo.simProvider = "思域网络&"+simInfo.simProvider
             this.setData({simInfo})
         })
     },
