@@ -121,13 +121,13 @@ Page({
   help(){
     let targetUrl = 'https://siyu.d.blueshark.com/static/help/index.html?time=new Date().getTime()'
     wx.navigateTo({
-      url: '../out/index?mername=帮助中心&targetUrl='+targetUrl,
+      url: '../webView/index?mername=帮助中心&targetUrl='+targetUrl,
     })
   },
   userAgreementAndPrivacy(){
     let targetUrl = 'https://siyu.d.blueshark.com/static/userAgreementAndPrivacy/index.html?time=new Date().getTime()'
     wx.navigateTo({
-      url: '../out/index?mername=用户协议及隐私&targetUrl='+targetUrl,
+      url: '../webView/index?mername=用户协议及隐私&targetUrl='+targetUrl,
     })
   },
   simList(){ // 隐藏的调试页面
