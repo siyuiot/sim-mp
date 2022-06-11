@@ -1,4 +1,4 @@
-/* pages/home/home.wxss */
+/* pages/home/index.wxss */
 
 page {
     height: 100%;
@@ -88,6 +88,6 @@ page {
       flex: 1;
       margin: 0 30rpx;
   }
-  .help{
+  .debug{
     opacity: 0;
   }

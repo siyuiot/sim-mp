@@ -35,28 +35,7 @@ Page({
         title: "加载中",
       })
       wxhttp.simInfo({
-        data: {
           sid: this.data.urlParamSid
-        },
-        success(res) {
-          wx.hideLoading()
-          // console.log(res)
-          if (res.state == 0) {
-            callback()
-          } else {
-            wx.showToast({
-              title: "失败,请重试",
-              icon: "none"
-            })
-          }
-        },
-        fail() {
-          wx.hideLoading()
-          wx.showToast({
-            title: "失败,请重试",
-            icon: "none"
-          })
-        }
       }).then((res) => {
         console.log(res)
         let vData = {info: res.data}

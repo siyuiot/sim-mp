@@ -33,28 +33,7 @@ Page({
       })
       
       wxhttp.simList({
-        data: {
-          
-        },
-        success(res) {
-          wx.hideLoading()
-          // console.log(res)
-          if (res.state == 0) {
-            callback()
-          } else {
-            wx.showToast({
-              title: "失败,请重试",
-              icon: "none"
-            })
-          }
-        },
-        fail() {
-          wx.hideLoading()
-          wx.showToast({
-            title: "失败,请重试",
-            icon: "none"
-          })
-        }
+        
       }).then((res) => {
         console.log(res)
         this.setData({list: res.data})

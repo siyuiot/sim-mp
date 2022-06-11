@@ -139,31 +139,10 @@ Page({
       })
       let openId = wx.getStorageSync("openId")
       wxhttp.simOrderPayment({
-        data: {
           appId: wxconf.app.appid,
           openId: openId,
           sid: this.data.urlParamSid,
           skuId: this.data.urlParamSkuId
-        },
-        success(res) {
-          wx.hideLoading()
-          // console.log(res)
-          if (res.state == 0) {
-            callback()
-          } else {
-            wx.showToast({
-              title: "失败,请重试",
-              icon: "none"
-            })
-          }
-        },
-        fail() {
-          wx.hideLoading()
-          wx.showToast({
-            title: "失败,请重试",
-            icon: "none"
-          })
-        }
       }).then((res) => {
         console.log(res)
         // 调起支付

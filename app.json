@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/home/home",
-    "pages/zf/zf",
+    "pages/home/index",
+    "pages/logs/index",
+    "pages/webView/index",
     "pages/simBind/index",
     "pages/simList/index",
     "pages/simInfo/index",
@@ -30,7 +30,7 @@
         "pagePath": "pages/index/index"
       },
       { 
-        "pagePath": "pages/home/home"
+        "pagePath": "pages/home/index"
       }
     ]
   },

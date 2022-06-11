@@ -62,7 +62,7 @@ const request = (url, method, data) => {
           //   })
           // }
           wx.reLaunch({
-            url: '/pages/home/home',
+            url: '/pages/home/index',
           })
         } else {
           if (res.data.state == 0) {

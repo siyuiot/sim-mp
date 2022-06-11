@@ -1,19 +1,20 @@
-<!--pages/home/home.wxml-->
+<!--pages/home/index.wxml-->
 <view class="wrapper">
   <button class="my-top" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">
     <view class="my-portrait">
       <image src="/assets/images/{{isLogined?'logined_portrait.png':'portrait.png'}}"></image>
     </view>
-    <view class="phone">{{isLogined?phoneNumber:"未登录"}}</view>
+    <view class="phone">{{isLogined?phoneNumber:"登录"}}</view>
     <view class="login" wx:if="{{isLogined}}">
       <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">切换账号登录</button>
     </view>
   </button>
   <view class="my-content">
     <nav-card icon="cart" text="我的套餐" bindtap="toMySim" wx:if="{{isCombo}}"></nav-card>
-    <nav-card icon="shopping-cart" text="套餐续费" bindtap="toSimPay" wx:if="{{isCombo}}"></nav-card>
-    <nav-card icon="todo-list" text="实名认证" bindtap="idCard"></nav-card>
-    <!-- <nav-card icon="chat" text="帮助中心" bindtap="toSim"></nav-card> -->
+    <nav-card icon="balance-list" text="套餐续费" bindtap="toSimPay" wx:if="{{isCombo}}"></nav-card>
+    <nav-card icon="todo-list" text="实名认证" bindtap="idCard" wx:if="{{isCombo}}"></nav-card>
+    <nav-card icon="chat" text="帮助中心" bindtap="help"></nav-card>
+    <nav-card icon="map-marked" text="用户协议及隐私" bindtap="userAgreementAndPrivacy"></nav-card>
   </view>
-  <text class="help" bindtap="help">帮助</text>
+  <text class="debug" bindtap="simList">调试</text>
 </view>

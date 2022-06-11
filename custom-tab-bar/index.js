@@ -10,7 +10,7 @@ Component({
 			{
 				icon: 'manager',
 				text: '我的',
-				url: '/pages/home/home'
+				url: '/pages/home/index'
 			},
 			// {
 			// 	icon: 'location',
