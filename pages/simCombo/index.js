@@ -57,11 +57,6 @@ Page({
                 }else{
                     item.itemMargin=''
                 }
-                if(item.skuId===1){
-                  item.duration = 1
-                }else if(item.skuId===2){
-                  item.duration = 12
-                }else{}
             })
             this.setData({ list: res.data })
         })
