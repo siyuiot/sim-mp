@@ -93,7 +93,7 @@ Page({
           })
         }
       }).then((res) => {
-        console.log(res)
+        // console.log(res)
         this.setData({productInfo: res.data})
       })
     },
@@ -144,7 +144,7 @@ Page({
           sid: this.data.urlParamSid,
           skuId: this.data.urlParamSkuId
       }).then((res) => {
-        console.log(res)
+        // console.log(res)
         // 调起支付
         wx.requestPayment({
           timeStamp: res.data.timeStamp,
@@ -153,10 +153,10 @@ Page({
           signType: res.data.signType,
           paySign: res.data.paySign,
           success (res) {
-            console.log(res)
+            // console.log(res)
           },
           fail (res) {
-            console.log(res)
+            // console.log(res)
           }
         })
       })

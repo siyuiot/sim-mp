@@ -93,7 +93,7 @@ Page({
       skuId: this.data.urlParamSkuId
     }
     wxhttp.simOrderPayment(req).then((res) => {
-      console.log(res)
+      // console.log(res)
       // 调起支付
       wx.requestPayment({
         timeStamp: res.data.timeStamp,

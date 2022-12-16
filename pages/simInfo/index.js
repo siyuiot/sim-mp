@@ -37,7 +37,7 @@ Page({
       wxhttp.simInfo({
           sid: this.data.urlParamSid
       }).then((res) => {
-        console.log(res)
+        // console.log(res)
         let vData = {info: res.data}
         vData.info.bindAt = util.formatTime(new Date(vData.info.bindTs * 1000)).slice(0,10)
         vData.info.serviceEndAt = util.formatTime(new Date(vData.info.serviceEndTs * 1000)).slice(0,10)

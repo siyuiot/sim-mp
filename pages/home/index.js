@@ -1,3 +1,4 @@
+let wxconf = require("../../config.js") //静态配置文件
 const login = require('../../utils/login')
 const wxhttp = require('../../utils/wxhttp')
 // pages/home/index.js
@@ -119,13 +120,13 @@ Page({
     })
   },
   help(){
-    let targetUrl = 'https://siyu.d.blueshark.com/static/help/index.html?time=new Date().getTime()'
+    let targetUrl = `https://${wxconf.host}/static/help/index.html?time=new Date().getTime()`
     wx.navigateTo({
       url: '../webView/index?mername=帮助中心&targetUrl='+targetUrl,
     })
   },
   userAgreementAndPrivacy(){
-    let targetUrl = 'https://siyu.d.blueshark.com/static/userAgreementAndPrivacy/index.html?time=new Date().getTime()'
+    let targetUrl = `https://${wxconf.host}/static/userAgreementAndPrivacy/index.html?time=new Date().getTime()`
     wx.navigateTo({
       url: '../webView/index?mername=用户协议及隐私&targetUrl='+targetUrl,
     })

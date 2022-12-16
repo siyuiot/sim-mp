@@ -1,11 +1,9 @@
-const host = "siyu.d.blueshark.com"
-// const host = "siyu.blueshark.com"
+const host = "siyu.atrenew.com:6443"
 
 const config = {
-
+  host: host,
   // 下面的地址配合云端 Demo 工作
   service: {
-    host,
     // 测试的请求地址，用于测试会话
     // requestUrl: `https://${host}`,
 

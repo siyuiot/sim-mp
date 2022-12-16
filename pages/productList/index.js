@@ -15,7 +15,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      console.log(options)
+      // console.log(options)
       this.setData({sid: parseInt(options.sid)})
     },
 
@@ -36,7 +36,7 @@ Page({
       wxhttp.productList({
           pid: 1
       }).then((res) => {
-        console.log(res)
+        // console.log(res)
         this.setData({list: res.data})
       })
     },

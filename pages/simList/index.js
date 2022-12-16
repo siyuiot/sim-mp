@@ -35,7 +35,7 @@ Page({
       wxhttp.simList({
         
       }).then((res) => {
-        console.log(res)
+        // console.log(res)
         this.setData({list: res.data})
       })
     },
