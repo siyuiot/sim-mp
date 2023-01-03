@@ -1,4 +1,4 @@
-const host = "siyu.atrenew.com:6443"
+const host = "siyu.ltinyho.top"
 
 const config = {
   host: host,
