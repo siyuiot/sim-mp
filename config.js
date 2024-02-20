@@ -1,4 +1,4 @@
-const host = "siyu.ltinyho.top"
+const host = "siyu.infraac.com"
 
 const config = {
   host: host,
